@@ -11,10 +11,10 @@
                 "method": "GET",
                 "header": [],
                 "url": {
-                    "raw": "http://helloworld.default.svc.cluster.local:8080/hello",
+                    "raw": "http://http://helloworld-service.default.svc.cluster.local/hello",
                     "protocol": "http",
                     "host": [
-                        "helloworld.default.svc.cluster.local"
+                        "http://helloworld-service.default.svc.cluster.local"
                     ],
                     "port": "8080",
                     "path": [
