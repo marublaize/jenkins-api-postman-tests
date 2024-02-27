@@ -16,6 +16,10 @@ pipeline {
         }
     }
 
+    options {
+        timestamps()
+    }
+
     stages {
         stage('Postman Test') {
             steps {
