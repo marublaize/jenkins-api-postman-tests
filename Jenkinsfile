@@ -20,6 +20,15 @@ pipeline {
         timestamps()
     }
 
+    environment {
+        // These variables are mandatory to stay exactly how they are, or else
+        // it won't be able to identify the moment to build or promote an image
+        GIT_COMMIT_SHORT = sh (
+            script: 'git rev-parse --short=8 ${GIT_COMMIT}',
+            returnStdout: true
+        ).trim()
+    }
+
     stages {
         stage('Postman Test') {
             steps {
