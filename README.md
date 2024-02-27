@@ -1,1 +1,1 @@
-# jenkins-api-tests
+# jenkins-api-postman-tests
