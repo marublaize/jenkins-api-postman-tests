@@ -19,7 +19,7 @@ pipeline {
     post {
         success {
             // Trigger downstream pipeline
-            build job: 'Content Servicess/Staging/API', result: 'SUCCESS'
+            build job: 'Content Services/Staging/API/main', result: 'SUCCESS'
         }
     }
 
