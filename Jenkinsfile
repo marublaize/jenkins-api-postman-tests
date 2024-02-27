@@ -15,6 +15,14 @@ pipeline {
             """
         }
     }
+
+    post {
+        success {
+            // Trigger downstream pipeline
+            build job: 'Content Servicess/Staging/API', result: 'SUCCESS'
+        }
+    }
+
     stages {
         stage('Postman Test') {
             steps {
