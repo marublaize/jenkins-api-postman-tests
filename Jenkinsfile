@@ -16,13 +16,6 @@ pipeline {
         }
     }
 
-    post {
-        success {
-            // Trigger downstream pipeline
-            build job: 'Content Services/Staging/API/main', result: 'SUCCESS'
-        }
-    }
-
     stages {
         stage('Postman Test') {
             steps {
@@ -38,4 +31,5 @@ pipeline {
             }
         }
     }
+
 }
